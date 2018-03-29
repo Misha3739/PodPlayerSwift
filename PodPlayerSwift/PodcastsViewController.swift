@@ -25,9 +25,12 @@ class PodcastsViewController: NSViewController {
                         let parser = XMLParser()
                         parser.GetPodcastMetadata(data: data!)
                     }
+                    self.PodcastTextField.stringValue = ""
                }
             }.resume()
         }
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
