@@ -9,7 +9,6 @@
 import Cocoa
 
 class PodcastsViewController: NSViewController {
-
     @IBOutlet weak var PodcastTextField: NSTextField!
     @IBOutlet weak var AddPodcastButton: NSButton!
 
@@ -27,7 +26,7 @@ class PodcastsViewController: NSViewController {
                         parser.GetPodcastMetadata(data: data!)
                     }
                }
-            }
+            }.resume()
         }
     }
     override func viewDidLoad() {
