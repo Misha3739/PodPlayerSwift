@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5A0E8D05206D525700D132A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E8D04206D525700D132A0 /* AppDelegate.swift */; };
-		5A0E8D07206D525700D132A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E8D06206D525700D132A0 /* ViewController.swift */; };
 		5A0E8D0A206D525700D132A0 /* PodPlayerSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E8D08206D525700D132A0 /* PodPlayerSwift.xcdatamodeld */; };
 		5A0E8D0C206D525700D132A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A0E8D0B206D525700D132A0 /* Assets.xcassets */; };
 		5A0E8D0F206D525700D132A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0E8D0D206D525700D132A0 /* Main.storyboard */; };
 		5A0E8D1B206D525800D132A0 /* PodPlayerSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E8D1A206D525800D132A0 /* PodPlayerSwiftTests.swift */; };
 		5A0E8D26206D525800D132A0 /* PodPlayerSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E8D25206D525800D132A0 /* PodPlayerSwiftUITests.swift */; };
+		5A8F80C6206D60BF0023FD3C /* PodcastsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80C5206D60BF0023FD3C /* PodcastsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		5A0E8D01206D525700D132A0 /* PodPlayerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodPlayerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0E8D04206D525700D132A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5A0E8D06206D525700D132A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5A0E8D09206D525700D132A0 /* PodPlayerSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PodPlayerSwift.xcdatamodel; sourceTree = "<group>"; };
 		5A0E8D0B206D525700D132A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A0E8D0E206D525700D132A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 		5A0E8D21206D525800D132A0 /* PodPlayerSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PodPlayerSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0E8D25206D525800D132A0 /* PodPlayerSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodPlayerSwiftUITests.swift; sourceTree = "<group>"; };
 		5A0E8D27206D525800D132A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A8F80C5206D60BF0023FD3C /* PodcastsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +99,12 @@
 			isa = PBXGroup;
 			children = (
 				5A0E8D04206D525700D132A0 /* AppDelegate.swift */,
-				5A0E8D06206D525700D132A0 /* ViewController.swift */,
 				5A0E8D0B206D525700D132A0 /* Assets.xcassets */,
 				5A0E8D0D206D525700D132A0 /* Main.storyboard */,
 				5A0E8D10206D525700D132A0 /* Info.plist */,
 				5A0E8D11206D525700D132A0 /* PodPlayerSwift.entitlements */,
 				5A0E8D08206D525700D132A0 /* PodPlayerSwift.xcdatamodeld */,
+				5A8F80C5206D60BF0023FD3C /* PodcastsViewController.swift */,
 			);
 			path = PodPlayerSwift;
 			sourceTree = "<group>";
@@ -260,8 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A0E8D07206D525700D132A0 /* ViewController.swift in Sources */,
 				5A0E8D0A206D525700D132A0 /* PodPlayerSwift.xcdatamodeld in Sources */,
+				5A8F80C6206D60BF0023FD3C /* PodcastsViewController.swift in Sources */,
 				5A0E8D05206D525700D132A0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

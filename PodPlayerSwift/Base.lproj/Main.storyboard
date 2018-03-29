@@ -684,7 +684,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Pod Player" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -726,10 +726,10 @@
             </objects>
             <point key="canvasLocation" x="86" y="723"/>
         </scene>
-        <!--View Controller-->
+        <!--Podcasts View Controller-->
         <scene sceneID="pcB-UZ-Qdp">
             <objects>
-                <viewController id="GEJ-1B-Odf" sceneMemberID="viewController">
+                <viewController id="GEJ-1B-Odf" customClass="PodcastsViewController" customModule="PodPlayerSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="QcJ-1K-8vv">
                         <rect key="frame" x="0.0" y="0.0" width="160" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -743,6 +743,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="AddPodcastButtonClick:" target="GEJ-1B-Odf" id="ig3-uU-I4f"/>
+                                </connections>
                             </button>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UuK-vR-Tze">
                                 <rect key="frame" x="5" y="19" width="150" height="22"/>
@@ -834,6 +837,10 @@
                             <constraint firstItem="UuK-vR-Tze" firstAttribute="leading" secondItem="QcJ-1K-8vv" secondAttribute="leading" constant="5" id="zsG-fk-VGV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="AddPodcastButton" destination="gSk-FS-aa9" id="Z0s-RA-Qti"/>
+                        <outlet property="PodcastTextField" destination="UuK-vR-Tze" id="iZe-dj-00J"/>
+                    </connections>
                 </viewController>
                 <customObject id="POX-lj-FkG" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
