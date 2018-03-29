@@ -14,6 +14,21 @@ class PodcastsViewController: NSViewController {
     @IBOutlet weak var AddPodcastButton: NSButton!
 
     @IBAction func AddPodcastButtonClick(_ sender: NSButton) {
+        if let url = URL(string: PodcastTextField.stringValue) {
+            URLSession.shared.dataTask(with: url) {
+            (data: Data?,response: URLResponse?, error: Error?) in
+               if error != nil {
+                    print(error)
+               }
+               else{
+                    if data != nil
+                    {
+                        let parser = XMLParser()
+                        parser.GetPodcastMetadata(data: data!)
+                    }
+               }
+            }
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
