@@ -23,10 +23,7 @@ class PodcastsViewController: NSViewController {
                     if data != nil
                     {
                         let parser = XMLParser()
-                        if let title = parser.GetPodcastMetadata(data: data!)
-                        {
-                            print(title)
-                        }
+                        let info = parser.GetPodcastMetadata(data: data!)
                         
                     }
                     self.PodcastTextField.stringValue = ""
