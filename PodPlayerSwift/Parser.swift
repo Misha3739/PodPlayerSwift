@@ -9,8 +9,8 @@
 import Foundation
 
 class XMLParser{
-    public func GetPodcastMetadata(data: Data) {
+    public func GetPodcastMetadata(data: Data) -> String? {
         let xml = SWXMLHash.parse(data)
-        print(xml["rss"]["channel"]["title"].element?.text);
+        return xml["rss"]["channel"]["title"].element?.text
     }
 }
