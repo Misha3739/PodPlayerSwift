@@ -35,7 +35,7 @@ class PodcastsViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        PodcastTextField.stringValue = "https://itunes.apple.com/ru/podcast/tms-1458-milk-money/id414564832?i=1000407762960&mt=2";
+        PodcastTextField.stringValue = "http://feeds.feedburner.com/abcradio/starthere";
     }
     
 }
