@@ -102,6 +102,12 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableVie
         return nil
     }
     
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        let rowIndex = podcastTableView.selectedRow
+        if(rowIndex >= 0) {
+            let podcast = Podcasts[rowIndex]
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
