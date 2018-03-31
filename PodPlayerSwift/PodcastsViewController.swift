@@ -9,6 +9,9 @@
 import Cocoa
 
 class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableViewDelegate {
+    
+    var Podcasts : [Podcast] = []
+    
     @IBOutlet weak var PodcastTextField: NSTextField!
     @IBOutlet weak var AddPodcastButton: NSButton!
 
@@ -52,11 +55,28 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableVie
             fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
             
             do {
-                let podcasts = try context.fetch(fetchRequest)
-                print(podcasts)
+                Podcasts = try context.fetch(fetchRequest)
+                print(Podcasts)
             } catch {}
         }
     }
+    
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return Podcasts.count
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("podcastcell"), owner: self) as? NSTableCellView
+        let podcast = Podcasts[row]
+        if podcast.title != nil{
+            cell?.textField?.stringValue = podcast.title!
+        }
+        else{
+            cell?.textField?.stringValue = "UNKNOWN TITLE"
+        }
+        return cell
+    }
+    
     
     
     override func viewDidLoad() {
