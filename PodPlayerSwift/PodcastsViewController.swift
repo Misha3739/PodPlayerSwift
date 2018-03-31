@@ -11,6 +11,7 @@ import Cocoa
 class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableViewDelegate {
     
     var Podcasts : [Podcast] = []
+    var EpisodesVC : EpisodesViewController? = nil
     
     @IBOutlet weak var PodcastTextField: NSTextField!
     @IBOutlet weak var AddPodcastButton: NSButton!
@@ -106,6 +107,8 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableVie
         let rowIndex = podcastTableView.selectedRow
         if(rowIndex >= 0) {
             let podcast = Podcasts[rowIndex]
+            EpisodesVC?.podcast = podcast
+            EpisodesVC?.updateView()
         }
     }
     

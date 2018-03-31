@@ -10,6 +10,8 @@ import Cocoa
 
 class EpisodesViewController: NSViewController {
 
+    var podcast : Podcast? = nil
+    
     @IBOutlet weak var TitleLabel: NSTextField!
     @IBOutlet weak var ImageView: NSImageView!
     @IBOutlet weak var PausePlayButton: NSButton!
@@ -24,4 +26,9 @@ class EpisodesViewController: NSViewController {
         // Do view setup here.
     }
     
+    func updateView() {
+            if(podcast?.title != nil){
+            TitleLabel.stringValue = podcast!.title!
+        }
+    }
 }

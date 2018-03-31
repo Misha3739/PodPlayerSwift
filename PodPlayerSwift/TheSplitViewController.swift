@@ -14,7 +14,13 @@ class TheSplitViewController: NSSplitViewController {
     @IBOutlet weak var EpisodesItem: NSSplitViewItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
-    }
+        
+        if let podcastsVC = PodcastsItem.viewController as? PodcastsViewController {
+            if let episodesVC = EpisodesItem.viewController as? EpisodesViewController {
+                podcastsVC.EpisodesVC = episodesVC
+                }
+            }
+        }
+        // Do view setup here
     
 }
