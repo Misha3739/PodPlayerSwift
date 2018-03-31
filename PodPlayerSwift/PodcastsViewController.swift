@@ -18,7 +18,12 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableVie
     @IBOutlet weak var podcastTableView: NSTableView!
     
     @IBAction func AddPodcastButtonClick(_ sender: NSButton) {
+        if(podcastExists(rssUrl: PodcastTextField.stringValue) == true){
+            return
+        }
+        
         if let url = URL(string: PodcastTextField.stringValue) {
+            
             URLSession.shared.dataTask(with: url) {
             (data: Data?,response: URLResponse?, error: Error?) in
                if error != nil {
@@ -84,6 +89,18 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableVie
         return cell
     }
     
+    func podcastExists(rssUrl: String) -> Bool? {
+        if let context = (NSApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let fetchRequest = Podcast.fetchRequest() as NSFetchRequest<Podcast>
+            fetchRequest.predicate = NSPredicate(format: "rssUrl == %@", rssUrl)
+            
+            do {
+                let matchedPodcasts = try context.fetch(fetchRequest)
+                return matchedPodcasts.count > 0
+            } catch {}
+        }
+        return nil
+    }
     
     
     override func viewDidLoad() {
