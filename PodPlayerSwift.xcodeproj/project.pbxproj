@@ -19,6 +19,7 @@
 		5A8F80D3206EBD800023FD3C /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80D1206EBD800023FD3C /* SWXMLHash.swift */; };
 		5A8F80D5206EBEEE0023FD3C /* shim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80D4206EBEEE0023FD3C /* shim.swift */; };
 		5A8F80D7207012A60023FD3C /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80D6207012A60023FD3C /* EpisodesViewController.swift */; };
+		5A8F80DD20701F170023FD3C /* TheSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80DC20701F170023FD3C /* TheSplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		5A8F80D1206EBD800023FD3C /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
 		5A8F80D4206EBEEE0023FD3C /* shim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shim.swift; sourceTree = "<group>"; };
 		5A8F80D6207012A60023FD3C /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
+		5A8F80DC20701F170023FD3C /* TheSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				5A8F80C5206D60BF0023FD3C /* PodcastsViewController.swift */,
 				5A8F80C7206D736E0023FD3C /* Parser.swift */,
 				5A8F80D6207012A60023FD3C /* EpisodesViewController.swift */,
+				5A8F80DC20701F170023FD3C /* TheSplitViewController.swift */,
 			);
 			path = PodPlayerSwift;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				5A8F80D5206EBEEE0023FD3C /* shim.swift in Sources */,
 				5A0E8D0A206D525700D132A0 /* PodPlayerSwift.xcdatamodeld in Sources */,
 				5A8F80C6206D60BF0023FD3C /* PodcastsViewController.swift in Sources */,
+				5A8F80DD20701F170023FD3C /* TheSplitViewController.swift in Sources */,
 				5A0E8D05206D525700D132A0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

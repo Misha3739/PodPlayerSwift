@@ -701,10 +701,10 @@
             </objects>
             <point key="canvasLocation" x="85" y="249"/>
         </scene>
-        <!--Split View Controller-->
+        <!--The Split View Controller-->
         <scene sceneID="i0i-qw-PdJ">
             <objects>
-                <splitViewController id="4Ws-zi-EmZ" sceneMemberID="viewController">
+                <splitViewController id="4Ws-zi-EmZ" customClass="TheSplitViewController" customModule="PodPlayerSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="gXh-Zd-QlE"/>
                         <splitViewItem id="BKd-A2-nGo"/>
@@ -717,6 +717,9 @@
                         </connections>
                     </splitView>
                     <connections>
+                        <outlet property="EpisodesItem" destination="BKd-A2-nGo" id="R6l-Kq-44Z"/>
+                        <outlet property="EpisodesIten" destination="BKd-A2-nGo" id="IUF-d9-7jm"/>
+                        <outlet property="PodcastsItem" destination="gXh-Zd-QlE" id="qyJ-tG-lVH"/>
                         <outlet property="splitView" destination="RCg-kK-Pti" id="TfJ-Fj-0dW"/>
                         <segue destination="GEJ-1B-Odf" kind="relationship" relationship="splitItems" id="wFM-5T-ANh"/>
                         <segue destination="Awe-Sv-Sy0" kind="relationship" relationship="splitItems" id="FG0-h1-h8x"/>
