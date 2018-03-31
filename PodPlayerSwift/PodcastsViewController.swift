@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class PodcastsViewController: NSViewController {
+class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableViewDelegate {
     @IBOutlet weak var PodcastTextField: NSTextField!
     @IBOutlet weak var AddPodcastButton: NSButton!
 
@@ -25,6 +25,15 @@ class PodcastsViewController: NSViewController {
                         let parser = XMLParser()
                         let info = parser.GetPodcastMetadata(data: data!)
                         
+                        if let context = (NSApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                            let podcast = Podcast(context: context)
+                            podcast.rssUrl = self.PodcastTextField.stringValue
+                            podcast.imageUrl = info.imageUrl;
+                            podcast.title = info.title
+                            
+                            (NSApplication.shared.delegate as? AppDelegate)?.saveAction(nil);
+                        }
+                        
                     }
                     self.PodcastTextField.stringValue = ""
                }
@@ -38,5 +47,6 @@ class PodcastsViewController: NSViewController {
         // Do view setup here.
         PodcastTextField.stringValue = "http://feeds.feedburner.com/abcradio/starthere";
     }
+    
     
 }

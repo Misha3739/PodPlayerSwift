@@ -805,6 +805,9 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <outlet property="delegate" destination="GEJ-1B-Odf" id="m6l-El-No0"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>
