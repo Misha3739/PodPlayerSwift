@@ -844,6 +844,7 @@
                     <connections>
                         <outlet property="AddPodcastButton" destination="gSk-FS-aa9" id="Z0s-RA-Qti"/>
                         <outlet property="PodcastTextField" destination="UuK-vR-Tze" id="iZe-dj-00J"/>
+                        <outlet property="podcastTableView" destination="PYq-yp-4Bw" id="DtK-pz-opf"/>
                     </connections>
                 </viewController>
                 <customObject id="POX-lj-FkG" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

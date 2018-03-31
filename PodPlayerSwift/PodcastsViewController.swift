@@ -15,6 +15,8 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableVie
     @IBOutlet weak var PodcastTextField: NSTextField!
     @IBOutlet weak var AddPodcastButton: NSButton!
 
+    @IBOutlet weak var podcastTableView: NSTableView!
+    
     @IBAction func AddPodcastButtonClick(_ sender: NSButton) {
         if let url = URL(string: PodcastTextField.stringValue) {
             URLSession.shared.dataTask(with: url) {
@@ -58,6 +60,8 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableVie
                 Podcasts = try context.fetch(fetchRequest)
                 print(Podcasts)
             } catch {}
+            
+            podcastTableView.reloadData()
         }
     }
     
