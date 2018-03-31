@@ -60,8 +60,10 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableVie
                 Podcasts = try context.fetch(fetchRequest)
                 print(Podcasts)
             } catch {}
+            DispatchQueue.main.async {
+                self.podcastTableView.reloadData()
+            }
             
-            podcastTableView.reloadData()
         }
     }
     
