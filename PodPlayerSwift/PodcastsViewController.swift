@@ -72,7 +72,8 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableVie
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("podcastcell"), owner: self) as? NSTableCellView
         let podcast = Podcasts[row]
-        if podcast.title != nil{
+        cell?.textField?.alignment = NSTextAlignment.center
+        if podcast.title != nil {
             cell?.textField?.stringValue = podcast.title!
         }
         else{
@@ -87,6 +88,7 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableVie
         super.viewDidLoad()
         // Do view setup here.
         PodcastTextField.stringValue = "http://feeds.feedburner.com/abcradio/starthere";
+        getPodcasts()
     }
     
     

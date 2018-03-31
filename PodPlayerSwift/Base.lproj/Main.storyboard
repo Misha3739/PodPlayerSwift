@@ -761,7 +761,7 @@
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lld-1Q-zoV">
                                 <rect key="frame" x="2" y="46" width="156" height="252"/>
                                 <clipView key="contentView" id="8mX-rU-W8Z">
-                                    <rect key="frame" x="1" y="23" width="154" height="228"/>
+                                    <rect key="frame" x="1" y="0.0" width="154" height="251"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="AV1-Se-K8r" viewBased="YES" id="PYq-yp-4Bw">
@@ -784,7 +784,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="FlW-MJ-vqd">
+                                                        <tableCellView identifier="podcastcell" id="FlW-MJ-vqd">
                                                             <rect key="frame" x="1" y="1" width="151" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
