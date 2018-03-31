@@ -882,6 +882,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="DeleteButtonClick:" target="Awe-Sv-Sy0" id="EX7-Vk-7ba"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8gP-Wb-Gy3">
                                 <rect key="frame" x="107" y="227" width="81" height="32"/>
@@ -889,6 +892,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="PlayPauseButtonClick:" target="Awe-Sv-Sy0" id="Piv-nj-4iQ"/>
+                                </connections>
                             </button>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dl-Qe-f8L">
                                 <rect key="frame" x="0.0" y="0.0" width="468" height="214"/>
@@ -937,6 +943,10 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="Awe-Sv-Sy0" id="wgd-pD-0fN"/>
+                                                <outlet property="delegate" destination="Awe-Sv-Sy0" id="75c-7p-G8o"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>
@@ -969,6 +979,13 @@
                             <constraint firstItem="2M9-Jf-kqD" firstAttribute="leading" secondItem="mma-xF-y8t" secondAttribute="leading" constant="29" id="zLQ-jM-ugt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="DeleteButton" destination="6Qd-yg-JDC" id="J9f-wX-J5A"/>
+                        <outlet property="ImageView" destination="oRv-Yd-ZX3" id="P7W-iY-h5t"/>
+                        <outlet property="PausePlayButton" destination="8gP-Wb-Gy3" id="aWf-Mf-e2z"/>
+                        <outlet property="TableView" destination="6DC-UN-HO6" id="vKE-zy-pu2"/>
+                        <outlet property="TitleLabel" destination="2M9-Jf-kqD" id="5YL-s0-Iws"/>
+                    </connections>
                 </viewController>
                 <customObject id="2bD-q3-Vbx" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
