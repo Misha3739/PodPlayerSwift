@@ -18,6 +18,7 @@
 		5A8F80D2206EBD800023FD3C /* SWXMLHash+TypeConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80D0206EBD800023FD3C /* SWXMLHash+TypeConversion.swift */; };
 		5A8F80D3206EBD800023FD3C /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80D1206EBD800023FD3C /* SWXMLHash.swift */; };
 		5A8F80D5206EBEEE0023FD3C /* shim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80D4206EBEEE0023FD3C /* shim.swift */; };
+		5A8F80D7207012A60023FD3C /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80D6207012A60023FD3C /* EpisodesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		5A8F80D0206EBD800023FD3C /* SWXMLHash+TypeConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SWXMLHash+TypeConversion.swift"; sourceTree = "<group>"; };
 		5A8F80D1206EBD800023FD3C /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
 		5A8F80D4206EBEEE0023FD3C /* shim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shim.swift; sourceTree = "<group>"; };
+		5A8F80D6207012A60023FD3C /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				5A0E8D08206D525700D132A0 /* PodPlayerSwift.xcdatamodeld */,
 				5A8F80C5206D60BF0023FD3C /* PodcastsViewController.swift */,
 				5A8F80C7206D736E0023FD3C /* Parser.swift */,
+				5A8F80D6207012A60023FD3C /* EpisodesViewController.swift */,
 			);
 			path = PodPlayerSwift;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			files = (
 				5A8F80C8206D736E0023FD3C /* Parser.swift in Sources */,
 				5A8F80D2206EBD800023FD3C /* SWXMLHash+TypeConversion.swift in Sources */,
+				5A8F80D7207012A60023FD3C /* EpisodesViewController.swift in Sources */,
 				5A8F80D3206EBD800023FD3C /* SWXMLHash.swift in Sources */,
 				5A8F80D5206EBEEE0023FD3C /* shim.swift in Sources */,
 				5A0E8D0A206D525700D132A0 /* PodPlayerSwift.xcdatamodeld in Sources */,

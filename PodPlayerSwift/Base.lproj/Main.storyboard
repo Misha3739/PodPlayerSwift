@@ -849,10 +849,10 @@
             </objects>
             <point key="canvasLocation" x="552" y="234"/>
         </scene>
-        <!--View Controller-->
+        <!--Episodes View Controller-->
         <scene sceneID="kzx-Bh-vX3">
             <objects>
-                <viewController id="Awe-Sv-Sy0" sceneMemberID="viewController">
+                <viewController id="Awe-Sv-Sy0" customClass="EpisodesViewController" customModule="PodPlayerSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="mma-xF-y8t">
                         <rect key="frame" x="0.0" y="0.0" width="468" height="352"/>
                         <autoresizingMask key="autoresizingMask"/>
