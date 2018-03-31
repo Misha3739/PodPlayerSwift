@@ -32,6 +32,8 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableVie
                             podcast.title = info.title
                             
                             (NSApplication.shared.delegate as? AppDelegate)?.saveAction(nil);
+                            
+                            self.getPodcasts()
                         }
                         
                     }
@@ -42,6 +44,21 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableVie
         
         
     }
+    
+    func getPodcasts()
+    {
+         if let context = (NSApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let fetchRequest = Podcast.fetchRequest() as NSFetchRequest<Podcast>
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+            
+            do {
+                let podcasts = try context.fetch(fetchRequest)
+                print(podcasts)
+            } catch {}
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
