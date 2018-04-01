@@ -11,15 +11,30 @@ import Cocoa
 class EpisodesViewController: NSViewController {
 
     var podcast : Podcast? = nil
+    var podcastsVC : PodcastsViewController? = nil
     
     @IBOutlet weak var TitleLabel: NSTextField!
     @IBOutlet weak var ImageView: NSImageView!
     @IBOutlet weak var PausePlayButton: NSButton!
     @IBOutlet weak var DeleteButton: NSButton!
+    
     @IBAction func PlayPauseButtonClick(_ sender: NSButton) {
     }
     @IBAction func DeleteButtonClick(_ sender: NSButton) {
+        if(podcast != nil) {
+            if let context = (NSApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                do {
+                    context.delete(podcast!)
+                    try context.save()
+                } catch{}
+            
+            }
+            podcastsVC?.getPodcasts()
+            podcast = nil
+            updateView()
+        }
     }
+    
     @IBOutlet weak var TableView: NSTableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +44,16 @@ class EpisodesViewController: NSViewController {
     func updateView() {
         if(podcast?.title != nil){
            TitleLabel.stringValue = podcast!.title!
+        }else{
+            TitleLabel.stringValue = ""
         }
         if(podcast?.imageUrl != nil) {
-            var image = NSImage(byReferencing : URL(string : podcast!.imageUrl!)!)
+            let image = NSImage(byReferencing : URL(string : podcast!.imageUrl!)!)
             ImageView.image = image
+        }else{
+            ImageView.image = nil
         }
+        
+        PausePlayButton.isHidden = true
     }
 }
