@@ -61,7 +61,7 @@ class EpisodesViewController: NSViewController {
     func getEpisodes()
     {
         if podcast?.rssUrl != nil {
-            let url = URL(string: podcast!.rssUrl!)!
+            if let url = URL(string: podcast!.rssUrl!){
                 URLSession.shared.dataTask(with: url) {
                     (data: Data?,response: URLResponse?, error: Error?) in
                     if error != nil {
@@ -73,12 +73,10 @@ class EpisodesViewController: NSViewController {
                             let parser = XMLParser()
                             let episodes = parser.GetEpisodes(data: data!)
                             
-                           
-                            
                         }
                     }
                 }.resume()
             }
-        
+        }
     }
 }

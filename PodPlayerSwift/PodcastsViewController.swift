@@ -47,9 +47,10 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableVie
                             
                             self.getPodcasts()
                         }
-                        
+                        DispatchQueue.main.async {
+                            self.PodcastTextField.stringValue = ""
+                        }
                     }
-                    self.PodcastTextField.stringValue = ""
                }
             }.resume()
         }
