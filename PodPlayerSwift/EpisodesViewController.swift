@@ -55,12 +55,10 @@ class EpisodesViewController: NSViewController {
         }
         
         PausePlayButton.isHidden = true
-        
-        let parser = XMLParser()
-        parser.GetEpisodes()
+        getEpisodes()
     }
     
-    func getEpisodes(episodesUrl: String)
+    func getEpisodes()
     {
         if podcast?.rssUrl != nil {
             let url = URL(string: podcast!.rssUrl!)!
@@ -73,7 +71,7 @@ class EpisodesViewController: NSViewController {
                         if data != nil
                         {
                             let parser = XMLParser()
-                            let info = parser.GetPodcastMetadata(data: data!)
+                            let episodes = parser.GetEpisodes(data: data!)
                             
                            
                             

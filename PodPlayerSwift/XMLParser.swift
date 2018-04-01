@@ -15,7 +15,7 @@ class XMLParser{
                 imageUrl: xml["rss"]["channel"]["itunes:image"].element?.attribute(by: "href")?.text)
     }
     
-    public func GetEpisodes(data: Data) -> [Episodes] {
+    public func GetEpisodes(data: Data) -> [Episode] {
         let xml = SWXMLHash.parse(data)
         print(xml)
         return []
