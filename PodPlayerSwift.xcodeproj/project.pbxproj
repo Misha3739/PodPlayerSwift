@@ -14,12 +14,13 @@
 		5A0E8D1B206D525800D132A0 /* PodPlayerSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E8D1A206D525800D132A0 /* PodPlayerSwiftTests.swift */; };
 		5A0E8D26206D525800D132A0 /* PodPlayerSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E8D25206D525800D132A0 /* PodPlayerSwiftUITests.swift */; };
 		5A8F80C6206D60BF0023FD3C /* PodcastsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80C5206D60BF0023FD3C /* PodcastsViewController.swift */; };
-		5A8F80C8206D736E0023FD3C /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80C7206D736E0023FD3C /* Parser.swift */; };
+		5A8F80C8206D736E0023FD3C /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80C7206D736E0023FD3C /* XMLParser.swift */; };
 		5A8F80D2206EBD800023FD3C /* SWXMLHash+TypeConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80D0206EBD800023FD3C /* SWXMLHash+TypeConversion.swift */; };
 		5A8F80D3206EBD800023FD3C /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80D1206EBD800023FD3C /* SWXMLHash.swift */; };
 		5A8F80D5206EBEEE0023FD3C /* shim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80D4206EBEEE0023FD3C /* shim.swift */; };
 		5A8F80D7207012A60023FD3C /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80D6207012A60023FD3C /* EpisodesViewController.swift */; };
 		5A8F80DD20701F170023FD3C /* TheSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80DC20701F170023FD3C /* TheSplitViewController.swift */; };
+		5A8F80DF2070CD6A0023FD3C /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8F80DE2070CD6A0023FD3C /* Episode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,12 +55,13 @@
 		5A0E8D25206D525800D132A0 /* PodPlayerSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodPlayerSwiftUITests.swift; sourceTree = "<group>"; };
 		5A0E8D27206D525800D132A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A8F80C5206D60BF0023FD3C /* PodcastsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsViewController.swift; sourceTree = "<group>"; };
-		5A8F80C7206D736E0023FD3C /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		5A8F80C7206D736E0023FD3C /* XMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		5A8F80D0206EBD800023FD3C /* SWXMLHash+TypeConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SWXMLHash+TypeConversion.swift"; sourceTree = "<group>"; };
 		5A8F80D1206EBD800023FD3C /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
 		5A8F80D4206EBEEE0023FD3C /* shim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shim.swift; sourceTree = "<group>"; };
 		5A8F80D6207012A60023FD3C /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		5A8F80DC20701F170023FD3C /* TheSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSplitViewController.swift; sourceTree = "<group>"; };
+		5A8F80DE2070CD6A0023FD3C /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				5A8F80C9206EBC360023FD3C /* Parser */,
+				5A8F80C7206D736E0023FD3C /* XMLParser.swift */,
 				5A0E8D04206D525700D132A0 /* AppDelegate.swift */,
 				5A0E8D0B206D525700D132A0 /* Assets.xcassets */,
 				5A0E8D0D206D525700D132A0 /* Main.storyboard */,
@@ -118,9 +121,9 @@
 				5A0E8D11206D525700D132A0 /* PodPlayerSwift.entitlements */,
 				5A0E8D08206D525700D132A0 /* PodPlayerSwift.xcdatamodeld */,
 				5A8F80C5206D60BF0023FD3C /* PodcastsViewController.swift */,
-				5A8F80C7206D736E0023FD3C /* Parser.swift */,
 				5A8F80D6207012A60023FD3C /* EpisodesViewController.swift */,
 				5A8F80DC20701F170023FD3C /* TheSplitViewController.swift */,
+				5A8F80DE2070CD6A0023FD3C /* Episode.swift */,
 			);
 			path = PodPlayerSwift;
 			sourceTree = "<group>";
@@ -291,7 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A8F80C8206D736E0023FD3C /* Parser.swift in Sources */,
+				5A8F80C8206D736E0023FD3C /* XMLParser.swift in Sources */,
+				5A8F80DF2070CD6A0023FD3C /* Episode.swift in Sources */,
 				5A8F80D2206EBD800023FD3C /* SWXMLHash+TypeConversion.swift in Sources */,
 				5A8F80D7207012A60023FD3C /* EpisodesViewController.swift in Sources */,
 				5A8F80D3206EBD800023FD3C /* SWXMLHash.swift in Sources */,

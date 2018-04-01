@@ -14,4 +14,10 @@ class XMLParser{
         return (title: xml["rss"]["channel"]["title"].element?.text,
                 imageUrl: xml["rss"]["channel"]["itunes:image"].element?.attribute(by: "href")?.text)
     }
+    
+    public func GetEpisodes(data: Data) -> [Episodes] {
+        let xml = SWXMLHash.parse(data)
+        print(xml)
+        return []
+    }
 }
