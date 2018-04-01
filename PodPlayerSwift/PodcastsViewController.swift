@@ -20,6 +20,7 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableVie
     
     @IBAction func AddPodcastButtonClick(_ sender: NSButton) {
         if(podcastExists(rssUrl: PodcastTextField.stringValue) == true){
+            dialogOKCancel(message : "Pocast with this URL was already added", caption : "Warning!")
             return
         }
         
@@ -117,6 +118,15 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource,NSTableVie
         // Do view setup here.
         PodcastTextField.stringValue = "http://feeds.feedburner.com/abcradio/starthere";
         getPodcasts()
+    }
+    
+    func dialogOKCancel(message: String, caption: String) -> Bool {
+        let alert = NSAlert()
+        alert.messageText = caption
+        alert.informativeText = message
+        alert.alertStyle = .warning
+        alert.addButton(withTitle: "OK")
+        return alert.runModal() == .alertFirstButtonReturn
     }
     
     
