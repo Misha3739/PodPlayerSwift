@@ -27,8 +27,12 @@ class EpisodesViewController: NSViewController {
     }
     
     func updateView() {
-            if(podcast?.title != nil){
-            TitleLabel.stringValue = podcast!.title!
+        if(podcast?.title != nil){
+           TitleLabel.stringValue = podcast!.title!
+        }
+        if(podcast?.imageUrl != nil) {
+            var image = NSImage(byReferencing : URL(string : podcast!.imageUrl!)!)
+            ImageView.image = image
         }
     }
 }
