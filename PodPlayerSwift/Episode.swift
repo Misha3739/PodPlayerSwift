@@ -16,7 +16,7 @@ public class Episode{
     
     public static let formatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "EEE MMM dd HH:mm:ss Z yyyy"
+        formatter.dateFormat = "EEE, dd MMM yyyy HH:mm:ss zzz"
         return formatter
     } ()
 }
