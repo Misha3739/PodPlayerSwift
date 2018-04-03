@@ -13,4 +13,10 @@ public class Episode{
     var publishDate = Date()
     var htmlDescription = ""
     var audioUrl = ""
+    
+    public static let formatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEE MMM dd HH:mm:ss Z yyyy"
+        return formatter
+    } ()
 }
