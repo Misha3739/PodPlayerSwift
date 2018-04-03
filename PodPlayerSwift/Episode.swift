@@ -10,7 +10,7 @@ import Foundation
 
 public class Episode{
     var title = ""
-    var publishDate = Date()
+    var publishDate : Date? = nil
     var htmlDescription = ""
     var audioUrl = ""
     

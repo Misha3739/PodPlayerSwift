@@ -72,7 +72,6 @@ class EpisodesViewController: NSViewController {
                         {
                             let parser = XMLParser()
                             let episodes = parser.GetEpisodes(data: data!)
-                            print(episodes)
                         }
                     }
                 }.resume()
