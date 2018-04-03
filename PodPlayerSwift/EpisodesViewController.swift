@@ -8,10 +8,11 @@
 
 import Cocoa
 
-class EpisodesViewController: NSViewController {
+class EpisodesViewController: NSViewController , NSTableViewDataSource, NSTableViewDelegate {
 
     var podcast : Podcast? = nil
     var podcastsVC : PodcastsViewController? = nil
+    var episodes: [Episode] = []
     
     @IBOutlet weak var TitleLabel: NSTextField!
     @IBOutlet weak var ImageView: NSImageView!
@@ -71,11 +72,27 @@ class EpisodesViewController: NSViewController {
                         if data != nil
                         {
                             let parser = XMLParser()
-                            let episodes = parser.GetEpisodes(data: data!)
+                            self.episodes = parser.GetEpisodes(data: data!)
+                            DispatchQueue.main.async {
+                                 self.TableView.reloadData()
+                            }
+                           
                         }
                     }
                 }.resume()
             }
         }
     }
+    
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return episodes.count
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let episode = episodes[row]
+        let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("episodeCell"), owner: self) as? NSTableCellView
+        cell?.textField?.stringValue = episode.title
+        return cell
+    }
+    
 }
