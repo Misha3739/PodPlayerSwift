@@ -29,10 +29,11 @@ class XMLParser{
                 episode.htmlDescription = htmldescription
             }
             
-            if let audioUrl = item["link"].element?.text as? String {
-                episode.audioUrl = audioUrl
-            }
-            
+            if let mediaGroup = item["media:group"].children as? [XMLIndexer] {
+                if let audioUrl = mediaGroup[0].element?.attribute(by: "url")?.text{
+                    episode.audioUrl = audioUrl
+                }
+        }
             if let pubDate = item["pubDate"].element?.text {
                 if let date = Episode.formatter.date(from: pubDate) {
                     episode.publishDate = date
