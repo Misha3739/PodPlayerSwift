@@ -7,12 +7,14 @@
 //
 
 import Cocoa
+import AVFoundation
 
 class EpisodesViewController: NSViewController , NSTableViewDataSource, NSTableViewDelegate {
 
     var podcast : Podcast? = nil
     var podcastsVC : PodcastsViewController? = nil
     var episodes: [Episode] = []
+    var player : AVPlayer? = nil
     
     @IBOutlet weak var TitleLabel: NSTextField!
     @IBOutlet weak var ImageView: NSImageView!
@@ -93,6 +95,16 @@ class EpisodesViewController: NSViewController , NSTableViewDataSource, NSTableV
         let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("episodeCell"), owner: self) as? NSTableCellView
         cell?.textField?.stringValue = episode.title
         return cell
+    }
+    
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        if(TableView.selectedRow >= 0){
+            let episode = episodes[TableView.selectedRow]
+            if let url = URL(string: episode.audioUrl) {
+               player = AVPlayer(url: url)
+               player?.play()
+            }
+        }
     }
     
 }
