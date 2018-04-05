@@ -22,6 +22,13 @@ class EpisodesViewController: NSViewController , NSTableViewDataSource, NSTableV
     @IBOutlet weak var DeleteButton: NSButton!
     
     @IBAction func PlayPauseButtonClick(_ sender: NSButton) {
+        if PausePlayButton.title == "Pause" {
+            player?.pause()
+            PausePlayButton.title = "Play"
+        }  else{
+            player?.play()
+            PausePlayButton.title = "Pause"
+       }
     }
     @IBAction func DeleteButtonClick(_ sender: NSButton) {
         if(podcast != nil) {
@@ -101,8 +108,16 @@ class EpisodesViewController: NSViewController , NSTableViewDataSource, NSTableV
         if(TableView.selectedRow >= 0){
             let episode = episodes[TableView.selectedRow]
             if let url = URL(string: episode.audioUrl) {
+               PausePlayButton.isHidden = false;
+               PausePlayButton.title = "Pause"
+                
+               player = nil
                player = AVPlayer(url: url)
                player?.play()
+            }
+            else{
+                PausePlayButton.isHidden = true
+                PausePlayButton.title = "Play"
             }
         }
     }
