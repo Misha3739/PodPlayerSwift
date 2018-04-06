@@ -926,7 +926,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="episodeCell" id="iUq-id-h9v">
+                                                        <tableCellView identifier="episodeCell" id="iUq-id-h9v" customClass="EpisodeCell" customModule="PodPlayerSwift" customModuleProvider="target">
                                                             <rect key="frame" x="1" y="1" width="463" height="115"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -973,6 +973,12 @@
                                                                 <constraint firstItem="3pR-XB-bQR" firstAttribute="leading" secondItem="iUq-id-h9v" secondAttribute="leading" constant="3" id="c85-UK-dNc"/>
                                                                 <constraint firstAttribute="trailing" secondItem="AM0-dO-5gO" secondAttribute="trailing" constant="3" id="weK-Nh-khX"/>
                                                             </constraints>
+                                                            <connections>
+                                                                <outlet property="DescriptionWebView" destination="AM0-dO-5gO" id="7Gg-so-z7a"/>
+                                                                <outlet property="OubdateLabel" destination="wmB-qw-an3" id="Ckc-pb-NA3"/>
+                                                                <outlet property="TitleLabel" destination="3pR-XB-bQR" id="bAh-V1-4Xk"/>
+                                                                <outlet property="descriptionWebView" destination="AM0-dO-5gO" id="vDb-vH-Sxd"/>
+                                                            </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
