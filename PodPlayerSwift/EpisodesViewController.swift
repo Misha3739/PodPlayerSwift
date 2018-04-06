@@ -48,6 +48,9 @@ class EpisodesViewController: NSViewController , NSTableViewDataSource, NSTableV
     @IBOutlet weak var TableView: NSTableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        DeleteButton.isHidden = true;
+        PausePlayButton.isHidden = true;
         // Do view setup here.
     }
     
@@ -65,6 +68,8 @@ class EpisodesViewController: NSViewController , NSTableViewDataSource, NSTableV
         }
         
         PausePlayButton.isHidden = true
+       
+        DeleteButton.isHidden = podcast == nil
         getEpisodes()
     }
     
@@ -90,6 +95,11 @@ class EpisodesViewController: NSViewController , NSTableViewDataSource, NSTableV
                     }
                 }.resume()
             }
+        }
+        else
+        {
+             episodes = []
+             self.TableView.reloadData()
         }
     }
     

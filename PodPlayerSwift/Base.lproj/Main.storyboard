@@ -862,11 +862,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2M9-Jf-kqD">
-                                <rect key="frame" x="27" y="307" width="66" height="25"/>
+                                <rect key="frame" x="27" y="307" width="4" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="02g-zY-OSn"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Sca-OL-jfz">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Sca-OL-jfz">
                                     <font key="font" metaFont="systemBold" size="24"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
