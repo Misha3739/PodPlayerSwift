@@ -99,9 +99,15 @@ class EpisodesViewController: NSViewController , NSTableViewDataSource, NSTableV
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let episode = episodes[row]
-        let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("episodeCell"), owner: self) as? NSTableCellView
-        cell?.textField?.stringValue = episode.title
+        let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("episodeCell"), owner: self) as? EpisodeCell
+        cell?.TitleLabel?.stringValue = episode.title
+        cell?.PubdateLabel?.stringValue = episode.publishDate?.description ?? ""
+        cell?.DescriptionWebView.loadHTMLString(episode.htmlDescription, baseURL: nil)
         return cell
+    }
+    
+    func  tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+        return 100;
     }
     
     func tableViewSelectionDidChange(_ notification: Notification) {

@@ -12,7 +12,7 @@ import WebKit
 class EpisodeCell: NSTableCellView {
 
     @IBOutlet weak var TitleLabel: NSTextField!
-    @IBOutlet weak var OubdateLabel: NSTextField!
+    @IBOutlet weak var PubdateLabel: NSTextField!
     @IBOutlet weak var DescriptionWebView: WKWebView!
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
