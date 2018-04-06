@@ -933,7 +933,7 @@
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3pR-XB-bQR">
                                                                     <rect key="frame" x="1" y="92" width="54" height="20"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="50" id="YFR-mx-cUV"/>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="YFR-mx-cUV"/>
                                                                         <constraint firstAttribute="height" constant="20" id="rX9-7d-imL"/>
                                                                     </constraints>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="BHs-rC-i66">
@@ -948,7 +948,7 @@
                                                                         <constraint firstAttribute="width" constant="50" id="AXD-ZM-V3A"/>
                                                                         <constraint firstAttribute="height" constant="20" id="OcA-AA-3xF"/>
                                                                     </constraints>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="DvR-fX-fRW">
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="DvR-fX-fRW">
                                                                         <font key="font" metaFont="systemBold" size="17"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -967,7 +967,6 @@
                                                                 <constraint firstItem="AM0-dO-5gO" firstAttribute="top" secondItem="iUq-id-h9v" secondAttribute="top" constant="50" id="6sv-Aa-uQD"/>
                                                                 <constraint firstItem="wmB-qw-an3" firstAttribute="top" secondItem="iUq-id-h9v" secondAttribute="top" constant="3" id="76H-1a-PG1"/>
                                                                 <constraint firstItem="AM0-dO-5gO" firstAttribute="leading" secondItem="iUq-id-h9v" secondAttribute="leading" constant="3" id="7f7-7p-cvZ"/>
-                                                                <constraint firstItem="wmB-qw-an3" firstAttribute="leading" secondItem="3pR-XB-bQR" secondAttribute="trailing" constant="357" id="8bK-CV-OwA"/>
                                                                 <constraint firstAttribute="trailing" secondItem="wmB-qw-an3" secondAttribute="trailing" constant="3" id="N4C-zo-6eq"/>
                                                                 <constraint firstItem="3pR-XB-bQR" firstAttribute="top" secondItem="iUq-id-h9v" secondAttribute="top" constant="3" id="Y2J-zt-hqF"/>
                                                                 <constraint firstItem="3pR-XB-bQR" firstAttribute="leading" secondItem="iUq-id-h9v" secondAttribute="leading" constant="3" id="c85-UK-dNc"/>
